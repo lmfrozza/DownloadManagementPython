@@ -158,7 +158,10 @@ A função recebe dois parâmetros:
   ```
 
 # Resumo da Lógica Geral
-- ##Criação de Pastas: O script verifica se as pastas necessárias existem e as cria, se necessário.
-Filtragem de Arquivos: Para cada tipo de arquivo (documentos, imagens, etc.), o script filtra os arquivos na pasta de Downloads com base nas extensões definidas.
-Movimentação de Arquivos: Os arquivos filtrados são movidos para suas respectivas pastas.
-Classificação de Arquivos Não Identificados: Arquivos que não se encaixam em nenhuma das categorias são movidos para uma pasta "Others".  
+- Criação de Pastas: O script verifica se as pastas necessárias existem e as cria, se necessário.
+
+- Filtragem de Arquivos: Para cada tipo de arquivo (documentos, imagens, etc.), o script filtra os arquivos na pasta de Downloads com base nas extensões definidas.
+
+- Movimentação de Arquivos: Os arquivos filtrados são movidos para suas respectivas pastas.
+
+- Classificação de Arquivos Não Identificados: Arquivos que não se encaixam em nenhuma das categorias são movidos para uma pasta "Others".  
