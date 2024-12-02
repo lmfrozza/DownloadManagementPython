@@ -37,7 +37,7 @@ Este projeto é um script em Python que organiza automaticamente os arquivos na 
 ## Uso
 - Navegue até o diretório onde o script está localizado.
 
-Execute o script:
+- Execute o script:
    ```bash
    python main.py
    ```
