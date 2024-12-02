@@ -43,7 +43,7 @@ Este projeto é um script em Python que organiza automaticamente os arquivos na 
    ```
 # Explicação do código
 
-## def Finda_Folder
+## def Find_Folder
    
 A função recebe dois parâmetros:
 - path: O caminho do diretório que está sendo verificado.
@@ -58,3 +58,26 @@ A função recebe dois parâmetros:
    ```
 - Se path estiver vazio (ou seja, não existe um diretório com esse nome), o código constrói o caminho completo usando os.path.join e cria o diretório usando os.makedirs, que cria todos os diretórios intermediários se necessário.
 - "exist_ok=True" evita um erro se o diretório já existir
+
+## def move_files
+
+A função recebe dois parâmetros:
+- file_types: Uma lista de extensões de arquivo que devem ser movidas.
+- directory: O nome do diretório para o qual os arquivos devem ser movidos.
+
+  ```bash
+   def move_files(file_types, directory):
+    destination = os.path.join(downloads_path, directory)
+    
+    for file_type in file_types:
+        section = [f for f in files if f.endswith(file_type)]
+        
+        for file_name in section:
+            source_path = os.path.join(downloads_path, file_name)
+            shutil.move(source_path, destination)
+   ```
+- O código constrói o caminho de destino onde os arquivos devem ser movidos.
+
+- Para cada tipo de arquivo na lista file_types, ele filtra os arquivos na pasta de Downloads para encontrar aqueles que terminam com a extensão correspondente.
+
+- Para cada arquivo encontrado, ele constrói o caminho de origem e usa shutil.move para mover o arquivo para o diretório de destino.
