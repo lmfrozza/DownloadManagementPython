@@ -14,6 +14,11 @@ Este projeto é um script em Python que organiza automaticamente os arquivos na 
 
 - Movimentação automática de arquivos para as pastas apropriadas.
 
+##Problema a ser resolvido
+- A medida que a quantidade de Downloads de arquivos é feita pelo usuários, se torna mais difícil encontrar/gerenciar arquivos dentro do diretório Downloads do usuário.
+
+- o Projeto tem o intuito de categorizar e ordenar esses arquivos para melhor gerenciamento dos Downloads 
+
 ## Instalação
 
 1. Clone este repositório ou baixe o arquivo `main.py`.
