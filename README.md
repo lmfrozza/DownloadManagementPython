@@ -108,3 +108,30 @@ A função recebe dois parâmetros:
   find_folder(next((f for f in files if f == "Executable"), None), 'Executable')
   find_folder(next((f for f in files if f == "Others"), None), 'Others')
   ```
+
+## Definição das Extensões de Arquivos
+
+- Cada lista (documents_, images_, sheets_, compacted_, executable_) contém as extensões que são relevantes para a categoria correspondente.
+- Essas listas serão usadas posteriormente para filtrar e mover os arquivos adequadamente.
+
+  ```bash
+  documents_ = [".pdf", ".docx", ".doc", ".txt", ".ofx", ".rtf", ".odt", ".ppt",     ".pptx", ".epub", ".mobi", ".html", ".htm"]
+  images_ = [".jpg", ".jpeg", ".png", ".webp", ".gif", ".tiff", ".tif", ".bmp",     ".svg", ".heic"]
+  sheets_ = [".xlsx", ".xls", ".ods", ".csv", ".tsv", ".dbf"]
+  compacted_ = [".zip", ".gz", ".rar", ".7z", ".tar", ".bz2", ".xz"]
+  executable_ = [".exe", ".msi", ".bat", ".sh", ".apk", ".dll"]
+  ```
+
+## Movimentação dos Arquivos para as Pastas Correspondentes
+
+- Para cada lista de extensões (documentos, imagens, planilhas, etc.), a função move_files é chamada, passando a lista de extensões e o nome da pasta de destino.
+
+- A função move_files faz a filtragem dos arquivos na pasta de Downloads e os move para as pastas apropriadas, conforme já explicado.
+
+  ```bash
+  move_files(documents_, 'Documents')
+  move_files(images_, 'Images')
+  move_files(sheets_, 'Sheets')
+  move_files(compacted_, 'Compact')
+  move_files(executable_, 'Executable')
+  ```
