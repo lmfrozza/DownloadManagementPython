@@ -135,3 +135,30 @@ A função recebe dois parâmetros:
   move_files(compacted_, 'Compact')
   move_files(executable_, 'Executable')
   ```
+
+## Identificar e Mover Arquivos que Não se Encaixam nas Categorias
+
+- Uma lista chamada management_folders é criada, contendo os nomes das pastas que foram criadas anteriormente.
+- O código lista novamente os arquivos na pasta de Downloads.
+- A lista other_files é construída filtrando os arquivos que não estão na lista management_folders.
+- Um loop percorre cada arquivo na lista other_files.
+- Para cada arquivo, o caminho de origem é construído e o caminho de destino é definido como a pasta "Others".
+- O arquivo é movido para a pasta "Others" usando shutil.move.
+
+  ```bash
+  management_folders = ["Documents", "Images", "Sheets", "Compact", "Executable",   "Others"]
+  files = os.listdir(downloads_path)
+
+  other_files = [f for f in files if f not in management_folders]
+
+  for file_name in other_files:
+    source_path = os.path.join(downloads_path, file_name)
+    destination_path = os.path.join(downloads_path, 'Others')
+    shutil.move(source_path, destination_path)
+  ```
+
+# Resumo da Lógica Geral
+- ##Criação de Pastas: O script verifica se as pastas necessárias existem e as cria, se necessário.
+Filtragem de Arquivos: Para cada tipo de arquivo (documentos, imagens, etc.), o script filtra os arquivos na pasta de Downloads com base nas extensões definidas.
+Movimentação de Arquivos: Os arquivos filtrados são movidos para suas respectivas pastas.
+Classificação de Arquivos Não Identificados: Arquivos que não se encaixam em nenhuma das categorias são movidos para uma pasta "Others".  
