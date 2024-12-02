@@ -94,3 +94,17 @@ A função recebe dois parâmetros:
   ```bash
   files = os.listdir(downloads_path)
   ```
+
+## Criação de Pastas para Organização
+
+- Para cada tipo de pasta (Documents, Images, etc.), o código verifica se já existe uma pasta correspondente na lista de arquivos.
+- Se não existir, a função find_folder é chamada para criar a pasta.
+
+  ```bash
+  find_folder(next((f for f in files if f == "Documents"), None), 'Documents')
+  find_folder(next((f for f in files if f == "Images"), None), 'Images')
+  find_folder(next((f for f in files if f == "Sheets"), None), 'Sheets')
+  find_folder(next((f for f in files if f == "Compact"), None), 'Compact')
+  find_folder(next((f for f in files if f == "Executable"), None), 'Executable')
+  find_folder(next((f for f in files if f == "Others"), None), 'Others')
+  ```
