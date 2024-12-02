@@ -14,11 +14,6 @@ Este projeto é um script em Python que organiza automaticamente os arquivos na 
 
 - Movimentação automática de arquivos para as pastas apropriadas.
 
-## Pré-requisitos
-
-- Python 3.x instalado no seu sistema.
-- Permissões adequadas para acessar e modificar a pasta de Downloads.
-
 ## Instalação
 
 1. Clone este repositório ou baixe o arquivo `main.py`.
