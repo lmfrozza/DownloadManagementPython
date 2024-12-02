@@ -35,7 +35,7 @@ Este projeto é um script em Python que organiza automaticamente os arquivos na 
     venv\Scripts\activate     # Para Windows
    ```
 ## Uso
-# Navegue até o diretório onde o script está localizado.
+- Navegue até o diretório onde o script está localizado.
 
 Execute o script:
    ```bash
