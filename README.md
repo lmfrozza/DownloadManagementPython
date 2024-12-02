@@ -81,3 +81,16 @@ A função recebe dois parâmetros:
 - Para cada tipo de arquivo na lista file_types, ele filtra os arquivos na pasta de Downloads para encontrar aqueles que terminam com a extensão correspondente.
 
 - Para cada arquivo encontrado, ele constrói o caminho de origem e usa shutil.move para mover o arquivo para o diretório de destino.
+
+## Definição do Caminho de Downloads
+
+- os.path.expanduser("~") obtém o diretório home do usuário atual. O caminho completo para a pasta de Downloads é então construído usando os.path.join.
+  ```bash
+  downloads_path = os.path.join(os.path.expanduser("~"), "Downloads")
+  ```
+## Listagem dos Arquivos na Pasta de Downloads
+
+- os.listdir retorna uma lista de todos os arquivos e diretórios contidos na pasta especificada.
+  ```bash
+  files = os.listdir(downloads_path)
+  ```
