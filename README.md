@@ -51,8 +51,10 @@ A função recebe dois parâmetros:
    
    ```bash
    def find_folder(path, name):
-    if not path:
+   if not path:
         folder_path = os.path.join(downloads_path, name)
         os.makedirs(folder_path, exist_ok=True)
         print(f"{folder_path} Diretório criado...")
    ```
+- Se path estiver vazio (ou seja, não existe um diretório com esse nome), o código constrói o caminho completo usando os.path.join e cria o diretório usando os.makedirs, que cria todos os diretórios intermediários se necessário.
+- "exist_ok=True" evita um erro se o diretório já existir
