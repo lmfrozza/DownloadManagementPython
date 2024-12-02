@@ -41,3 +41,18 @@ Este projeto é um script em Python que organiza automaticamente os arquivos na 
    ```bash
    python main.py
    ```
+# Explicação do código
+
+## def Finda_Folder
+   
+A função recebe dois parâmetros:
+- path: O caminho do diretório que está sendo verificado.
+- name: O nome do diretório a ser criado.
+   
+   ```bash
+   def find_folder(path, name):
+    if not path:
+        folder_path = os.path.join(downloads_path, name)
+        os.makedirs(folder_path, exist_ok=True)
+        print(f"{folder_path} Diretório criado...")
+   ```
